@@ -30,6 +30,8 @@ public class Cliente implements Serializable {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createAt;
 
+    private String foto;
+
     public String getNombre() {
         return nombre;
     }
@@ -70,4 +72,11 @@ public class Cliente implements Serializable {
         this.id = id;
     }
 
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
 }
