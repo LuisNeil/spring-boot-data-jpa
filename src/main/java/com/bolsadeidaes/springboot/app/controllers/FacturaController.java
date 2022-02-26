@@ -110,7 +110,7 @@ public class FacturaController {
     @GetMapping("/eliminar/{id}")
     public String eliminar(@PathVariable(value = "id") Long id, RedirectAttributes flash){
 
-        Factura factura = clienteService.findFacturaById(id);
+        Factura factura = clienteService.fetchFacturaByIdWithClienteWithItemFacturaWithProducto(id);//clienteService.findFacturaById(id);
 
         if(factura != null){
             clienteService.deleteFactura(id);
