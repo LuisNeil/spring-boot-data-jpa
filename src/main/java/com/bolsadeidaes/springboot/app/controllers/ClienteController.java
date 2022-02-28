@@ -113,7 +113,6 @@ public class ClienteController {
             cliente.setFoto(uniqueFilename);
         }
 
-
         String mensajeFlash = (cliente.getId() != null) ? "Cliente editado con exito" : "Cliente creado con exito";
 
         clienteService.save(cliente);
